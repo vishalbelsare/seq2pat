@@ -23,7 +23,7 @@ sys.path.append(os.path.join(os.path.dirname(__name__), '..'))
 # -- Project information -----------------------------------------------------
 
 project = 'Seq2Pat'
-copyright = 'GPL 2.0'
+copyright = '2024 FMR LLC'
 author = 'Xin Wang, Amin Hosseininasab, Serdar Kadioglu, Willem-Jan van Hoeve'
 
 # The short X.Y version
@@ -49,7 +49,10 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
 ]
+
+napoleon_use_rtype = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

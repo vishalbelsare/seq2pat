@@ -1,5 +1,5 @@
 // -*- coding: utf-8 -*-
-// SPDX-License-Identifier: GPL-2.0
+// SPDX-License-Identifier: Apache-2.0
 
 #ifndef SEQ2PAT_H
 #define SEQ2PAT_H
@@ -28,8 +28,8 @@ namespace patterns {
             vector<int> max_attrs, min_attrs;
 
             // Class object
-            Seq2pat ();
-            ~Seq2pat ();
+            Seq2pat();
+            ~Seq2pat();
 
             // Mining function
             std::vector< std::vector<int> > mine();

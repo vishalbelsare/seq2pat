@@ -1,5 +1,5 @@
 // -*- coding: utf-8 -*-
-// SPDX-License-Identifier: GPL-2.0
+// SPDX-License-Identifier: Apache-2.0
 
 #pragma once
 
@@ -29,7 +29,18 @@ public:
 	~Node() {
 		for (int i = 0; i < children.size(); i++){
 			delete children[i];
-		} 
+		}
+//		Clear the vector children and deallocate memory by swapping with an empty vector
+		std::vector<vector<Node*>*>().swap(children);
+
+		for (int i=0; i < attr.size(); i++){
+		    for (int j = 0; j < attr[i]->size(); j++)
+					delete attr[i]->at(j);
+		    delete attr[i];
+		}
+		std::vector<vector<vector<int>*>*>().swap(attr);
+
+		std::vector<int>().swap(seq_ID);
 	}
 
 };
